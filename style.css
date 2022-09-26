@@ -6,7 +6,40 @@
 
 body {
     min-height: 100vh;
-    background-image: url("./img/thunderstorm.gif");
+    background-image: url("./img/thunderstorm-3625405_960_720.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all .5s;
+}
+
+.snowy {
+    min-height: 100vh;
+    background-image: url("./img/snow.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cloudy {
+    min-height: 100vh;
+    background-image: url("./img/clouds.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.rainy {
+    min-height: 100vh;
+    background-image: url("./img/rain.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sunny {
+    min-height: 100vh;
+    background-image: url("./img/sun.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -16,14 +49,13 @@ main h1 {
     margin-top: 10rem;
 }
 
-.img-div {
-    width: 100vw;
-    margin: 2rem auto;
-}
+.text {
+    color: #333;
 
-.img-div img {
-    width: 400px;
-
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
+    font-size: 4rem;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
 }
 
 .text-light {
@@ -63,8 +95,27 @@ main h1 {
     padding-top: 1rem;
     font-size: 1.5rem;
     background-color: rgba(189, 196, 197, 0.363);
-    width: 12rem;
-    height: 17rem;
+    width: 15rem;
+    height: 20rem;
     border-radius: 10px;
     box-shadow: 2px 2px 10px 2px;
+    position: relative;
+    color: blue;
+    transition: all .5s;
 }
+
+.weather-div:hover {
+    transform: scale(110%);
+}
+
+.btn-cross {
+    position: absolute;
+    right: .5rem;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+/* .btn-cross i {
+    background-color: rgba(189, 196, 197, 0.363);
+} */
