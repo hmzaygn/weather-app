@@ -20,7 +20,7 @@ button.addEventListener("click", () => {
     )
       .then((res) => {
         if (!res.ok) {
-          throw new Error("You have enter a valid city in Turkiye");
+          throw new Error("You have to enter a valid city in Turkiye");
         }
         return res.json();
       })
@@ -32,7 +32,8 @@ button.addEventListener("click", () => {
 });
 
 result.addEventListener("click", (e) => {
-  if ((e.target.classList = "fa-x")) {
+  if (e.target.classList.contains("fa-x")) {
+    console.log(e.target.parentElement.parentElement);
     e.target.parentElement.parentElement.remove();
     cityList = cityList.filter(
       (el) =>
@@ -91,16 +92,3 @@ input.addEventListener("keydown", (e) => {
     button.click();
   }
 });
-
-// fetch(weatherUrl)
-//   .then((res) => {
-//     if(!res.ok){
-//         throw new Error("Something went wrong")
-//     }else if{cityList.includes(input.value)}{
-//         throw new Error("You already entered this city")
-//     }return res.json()
-//   })
-//   .then((data) => updateDom(data)).catch((err)=> {
-//     message.innerHTML = err
-
-//   });
